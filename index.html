@@ -15,12 +15,8 @@
     <!--Navegacion sencilla-->
     <nav>
         <ul>
-            <!--aca va a ir mi icono
-            <img 
-            -->
-            
-            <li><a href="index.html">Agregar Libro</a></li>
-            <li><a href="catalogo.html">Catálogo</a></li>
+           <li><a href="index.html">Agregar Libro</a></li>
+           <li><a href="catalogo.html">Catálogo</a></li>
         </ul>
     </nav>
 
@@ -36,7 +32,7 @@
             <span id="errorAuthor" class="error"></span>
 
             <label for="year">Año:</label>
-            <input type="number" id="year" name="year" placeholder="Año de publicación" pattern="/^\d{4}$/">
+            <input type="number" id="year" name="year" placeholder="Año de publicación" pattern="\d{4}">
             <span id="errorYear" class="error"></span>
 
             <label for="genre">Género:</label>
@@ -45,22 +41,21 @@
                 <option value="biography">Biografía</option>
                 <option value="design">Diseño</option>
                 <option value="history">Historia</option>
-                <option value="classics">Clásicos</option>
+                <option value="novel">Novela</option>
                 <option value="manga">Manga</option>
             </select>    <span id="errorGenre" class="error"></span>
 
             <button type="submit">Añadir Libro</button>
-            <button type="reset">Limpiar Formulario</button>
+            <button  type="reset">Limpiar Formulario</button>
         </form>
-
-        <p id="message" class="success"></p>
+        <p id="message" ></p>
     </main>
 
     <footer>
 
     </footer>
 
-
+    <script src="js/functions.js"></script>
     <script src="js/validator.js"></script>
 
 </body>

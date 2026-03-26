@@ -8,7 +8,9 @@ formulario.addEventListener("submit", function(event){
     const title = document.getElementById("title").value.trim();
     const author = document.getElementById("author").value.trim();
     const year = document.getElementById("year").value.trim();
-    const genre = document.getElementById("genre").value.trim();
+    const genre = document.getElementById("genre").value;
+
+    const message = document.getElementById("message");
 
     //Nossos elementos de error
     const errorTitle = document.getElementById("errorTitle");
@@ -20,7 +22,7 @@ formulario.addEventListener("submit", function(event){
     //Técnica del centinela: una sola variable que vigila si todo está correcto.
     let valido = true; //ponemos una variable booleana
         if(title === ""){
-            errorName.textContent = "El título es obligatorio";
+            errorTitle.textContent = "El título es obligatorio";
             valido = false;
         }else{
             errorTitle.textContent = "";
@@ -50,8 +52,10 @@ formulario.addEventListener("submit", function(event){
       ///////////  message class success
         if(valido) {
             message.textContent = "Libro añadido al catálogo";
+            message.className = "success";
         }else{
             message.textContent = "";
+            message.className = "";
         }
 
 }
