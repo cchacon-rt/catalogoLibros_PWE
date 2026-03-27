@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Listener para busqueda en tiempo real
     const inputBusqueda = document.getElementById("busqueda");
-    const filtroGenero = document.getElementById("filtroGenero"); // ⚡ nuevo select de género
+    const filtroGenero = document.getElementById("filtroGenero");
 
     // Funct que aplica ambos filtros aka busqueda y genero
     function aplicarFiltros() {

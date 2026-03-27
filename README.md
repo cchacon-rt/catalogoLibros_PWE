@@ -42,6 +42,7 @@ Crear una aplicación para registrar libros leídos o por leer. Cada libro tendr
 genero.
 - Mantener sincronizada la vista con los datos almacenados.
 
+
 ## Plan de trabajo sugerido (5 días)
 
 | Día | Actividad |
