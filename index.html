@@ -15,12 +15,13 @@
     <!--Navegacion sencilla-->
     <nav>
         <ul>
-           <li><a href="index.html">Agregar Libro</a></li>
-           <li><a href="catalogo.html">Catálogo</a></li>
+           <li><a href="#form">Agregar Libro</a></li>
+           <li><a href="#acervo">Catálogo</a></li>
         </ul>
     </nav>
 
     <main>
+    <section id="form">
         <h2>Agregar un Libro</h2>
         <form id="formulario">
             <label for="title">Título:</label>
@@ -36,6 +37,7 @@
             <span id="errorYear" class="error"></span>
 
             <label for="genre">Género:</label>
+            <!--Eleccion del genero en el form-->
             <select name="genre" id="genre">
                 <option value="scifi">Ciencia ficción</option>
                 <option value="biography">Biografía</option>
@@ -43,20 +45,46 @@
                 <option value="history">Historia</option>
                 <option value="novel">Novela</option>
                 <option value="manga">Manga</option>
+                <option value="poetry">Poesía</option>
             </select>    <span id="errorGenre" class="error"></span>
 
             <button type="submit">Añadir Libro</button>
             <button  type="reset">Limpiar Formulario</button>
         </form>
-        <p id="message" ></p>
+        <p id="message"></p>
+        </div>
+    </section>
+
+
+    <section id="acervo">
+         <h2>Catálogo de Libros</h2>
+        <input type="text" id="busqueda" placeholder="Buscar por título">
+
+        <!-- Filtro por género -->
+        <select id="filtroGenero">
+            <option value="">Todos</option>
+            <option value="scifi">Ciencia ficción</option>
+            <option value="biography">Biografía</option>
+            <option value="design">Diseño</option>
+            <option value="history">Historia</option>
+            <option value="novel">Novela</option>
+            <option value="manga">Manga</option>
+            <option value="poetry">Poesía</option>
+        </select>
+
+        <div id="resultado"></div>
+    </section>
     </main>
+    
 
     <footer>
+        <h1><i>Desarrollado por cchacon-rt</i></h1>
+        <h2>&copy; 2026 | Catálogo de Libros Personales | Proyecto académico PWE</h2>
 
+        <h3>¸.·´¯`·.¸.·´¯`·.¸.·´¯`·.¸.·´¯`·.¸.·´¯`·.¸.·´¯`·.¸.·´¯`·.¸</h3>
     </footer>
 
-    <script src="js/functions.js"></script>
-    <script src="js/validator.js"></script>
 
+    <script src="js/validator.js"></script>
 </body>
 </html>
