@@ -268,7 +268,7 @@ footer h1 {
   font-size: 0.8rem;
   color: #C58940;
   margin-bottom: 8px;
-  margin-top: 5%;
+  margin-top: 3%;
   text-align: center;
 }
 /*para etiquetas h2 contenidos en el footer*/
@@ -282,7 +282,7 @@ footer h2 {
 footer h3 {
   font-size: 0.6rem;
   color: #C58940;
-  margin-bottom: 4px;
+  margin-bottom: 3%;
   text-align: center;
 }
 
