@@ -8,8 +8,12 @@
  //__.....----~~~~._\ | /_.~~~~----.....__\\
 ====================\\|//====================
 ```
+
+
 ## Descripción
 Crear una aplicación para registrar libros leídos o por leer. Cada libro tendrá título, autor, año de publicación y género. Los registros se mostrarán en una tabla o tarjetas, y se podrán filtrar por género o buscar por título. La información se almacena en `localStorage` .
+
+
 
 ## Requerimientos específicos
 
@@ -41,6 +45,8 @@ Crear una aplicación para registrar libros leídos o por leer. Cada libro tendr
 - Almacenar en `localStorage` un arreglo de libros con campos: id, titulo, autor, año,
 genero.
 - Mantener sincronizada la vista con los datos almacenados.
+
+
 
 
 ## Plan de trabajo sugerido (5 días)

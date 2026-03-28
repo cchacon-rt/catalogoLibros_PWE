@@ -1,12 +1,20 @@
+/*Fondo del body con imagen*/
 body{
     background-image: url("../imgs/books2_bg.png");
     background-position: center;
+    background-attachment: fixed;
     background-size:contain;
     background-color: rgba(250, 234, 177, 0.861);
     background-blend-mode:lighten;
     font-family: monospace;
 }
 
+/*Espaciado inferior en el id form*/
+#form {
+  padding-bottom: 7%;
+}
+
+/*Estilo de campos en el id form input (entradas)*/
 #form input {
     display: block;
     margin-bottom: 10px;
@@ -16,16 +24,14 @@ body{
     border-radius: 15px;
 }
 
+/*las etiquetas de cada campo, eg titulo, autor, ...*/
 #form label{
   font-weight: bold;
   margin: 12px 0px 5px 0px;
   padding: 8px 8px;
 }
 
-#form {
-  padding-bottom: 7%;
-}
-
+/*todos los tags form*/
 form {
   border: 1px solid #FAF8F1;
   border-radius: 12px;
@@ -36,6 +42,7 @@ form {
   box-shadow: 3px 3px 0px #C58940;
 }
 
+/*todos los tags select o sea listas desplegables. eg ciencia ficcion, novela, ...*/
 select{
     display: block;
     margin-bottom: 10px;
@@ -45,14 +52,26 @@ select{
     border-radius: 12px;
 }
 
+/*Mi msj de resultado: No hay libros guardados. Cuando localStorage esta vacio*/
+#resultado {
+  color: #C58940;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  width: 40%;
+  margin: 20px auto;
+}
 
-
+/*Mi msj de error  que aparece bajo los inputs*/
 .error{
     display: block;
     margin-bottom: 5px;
     color:rgb(127, 11, 11);
     font-size: 14px;
 }
+
+/*Mi msj de exito cuando el form fue debidamente llenado y enviado*/
 .success{
   color: #724917;
   font-weight: bold;
@@ -65,7 +84,7 @@ select{
   display: block;  
 }
 
-
+/*Cabecera aka el titulo de mi pagina*/
 header {
   background-color: #C58940;
   color: #FAF8F1;
@@ -77,16 +96,19 @@ header {
   border-radius: 8px;
 }
 
+/*para etiquetas h1 que esten contenidos en el header*/
 header h1{
     color: #FAF8F1;
     text-align: center;
 }
 
+/*para etiquetas img que esten contenidos en el header*/
 header img {
   width: 70px;
   height: auto;
 }
 
+/*para etiquetas h2*/
 h2{
     text-align: center;
     color: #724917;
@@ -96,8 +118,8 @@ h2{
 
 
 
-/*************NAV************/
-
+/*************NAVbar************/
+/*menu estatico*/
 nav {
   background-color: #E5BA73;
   padding: 10px;
@@ -108,6 +130,7 @@ nav {
   box-shadow: 2px 2px 0px #C58940;
 }
 
+/*para etiquetas ul (unordered list) que esten contenidos en el nav*/
 nav ul {
   list-style: none; 
   margin: 0;
@@ -118,10 +141,12 @@ nav ul {
   gap: 10px;
 }
 
+/*para etiquetas li (elementos de lista) que esten contenidos en ul dentro del nav*/
 nav ul li {
   margin: 0 9%;
 }
 
+/*los enlaces del nav*/
 nav ul li a {
   text-decoration: none; 
   color: #724917;
@@ -132,34 +157,27 @@ nav ul li a {
   transition: background-color 0.3s;
   white-space: nowrap;
 }
-
+/*cuando el mouse pasa sobre el elemento*/
 nav ul li a:hover {
   background-color: #C58940;
   color: #FAF8F1;
-  
 }
 
 
 
 
 /************Estilos array de libros*****************/
-
+/*para elementos de section con el id acervo*/
 #acervo {
     background-image: url("../imgs/books_bg.jpeg");
     background-position: center;
+    background-attachment: fixed;
     background-size: contain;
     font-family: monospace;
     padding-top: 5%;
+    padding-bottom: 8%;
 }
-
-/*#acervo input {
-    display: block;
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 100%;
-    box-sizing: border-box;
-}*/
-
+/*para elementos de class libro*/
 .libro {
   border: 1px solid #E5BA73;
   padding: 12px;
@@ -169,7 +187,7 @@ nav ul li a:hover {
   width: 60%;
   box-shadow: 3px 3px 0px #C58940;
 }
-
+/*para etiquetas h3 en class libro*/
 .libro h3 {
   margin-top: 0;
   color: #C58940;
@@ -177,9 +195,8 @@ nav ul li a:hover {
 }
 
 
-
 /********BUSQUEDA********/
-
+/*para elementos con el id busqueda & filtro genero*/
 #busqueda,
 #filtroGenero {
   width: 40%;
@@ -195,6 +212,7 @@ nav ul li a:hover {
   cursor: pointer;
   box-sizing: border-box;
 }
+/*para elementos con el id busqueda & filtro genero, cuando se dan clic*/
 #busqueda:focus,
 #filtroGenero:focus {
   outline: none;
@@ -202,8 +220,8 @@ nav ul li a:hover {
   box-shadow: 2px 2px 0px #724917;
 }
 
-/***********BOTONES DEL FORM***************/
 
+/***********BOTONES DEL FORM***************/
 form button {
   border: none;
   padding: 10px 18px;
@@ -216,7 +234,7 @@ form button {
   align-items: center;
   gap: 6px;
 }
-
+/*al pasar sobre los botones del form*/
 form button:hover {
   background-color: #C58940;
   color: #FAF8F1;
@@ -224,7 +242,7 @@ form button:hover {
 
 
 /*******BOTONES DE EDITAR ELIMINAR***********/
-
+/*para button en class libro*/
 .libro button {
   border: none;
   padding: 8px 16px;
@@ -237,7 +255,7 @@ form button:hover {
   align-items: center;
   gap: 6px;
 }
-
+/*al pasar sobre button en class libro*/
 .libro button:hover {
   background-color: #C58940;
   color: #FAF8F1;
@@ -245,6 +263,7 @@ form button:hover {
 
 
 /********FOOTER***********/
+/*para etiquetas h1 contenidos en el footer*/
 footer h1 {
   font-size: 0.8rem;
   color: #C58940;
@@ -252,14 +271,14 @@ footer h1 {
   margin-top: 5%;
   text-align: center;
 }
-
+/*para etiquetas h2 contenidos en el footer*/
 footer h2 {
   font-size: 0.6rem;
   color: #C58940;
   margin-bottom: 6px;
   font-weight: normal;
 }
-
+/*para etiquetas h3 contenidos en el footer*/
 footer h3 {
   font-size: 0.6rem;
   color: #C58940;
@@ -267,8 +286,8 @@ footer h3 {
   text-align: center;
 }
 
-/**************RESPONSIVE MEDIA QUERY****************/
-
+/**************RESPONSIVE MEDIA QUERIES****************/
+/*cuando el ancho max del dispositivo sea 768*/
 @media (max-width: 768px) {
   form {
     width: 90%;
@@ -281,7 +300,7 @@ footer h3 {
     width: 80%;
   }
 }
-
+/*cuando el ancho max del dispositivo sea 480*/
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.2rem;
