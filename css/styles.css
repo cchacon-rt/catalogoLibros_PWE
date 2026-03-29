@@ -4,8 +4,6 @@ body{
     background-position: center;
     background-attachment: fixed;
     background-size:contain;
-    background-color: rgba(250, 234, 177, 0.861);
-    background-blend-mode:lighten;
     font-family: monospace;
 }
 
